@@ -1,0 +1,9 @@
+package edu.kh.basic;
+
+// 한 줄 주석
+/* 검성 고길동 범위 주석*/
+
+// class : 자바 코드가 작성되는 영역.
+public class JavaBasic {
+	
+}
