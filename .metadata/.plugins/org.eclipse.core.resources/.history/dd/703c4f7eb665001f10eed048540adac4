@@ -1,9 +1,0 @@
-package edu.kh.op.ex;
-
-public class OpExample { // 예제 코드 작성할 클래스
-
-	// ex1() method
-	public void ex1() {}
-	
-	
-}
