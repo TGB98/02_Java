@@ -60,9 +60,26 @@ public class OperatorPractice3 {
 		System.out.print("출금할 금액 입력 : ");
 		int total = sc.nextInt();
 		System.out.println("50000원 : "+ total/50000);
-		System.out.println("10000원 : "+ (total%50000)/10000);
-		System.out.println("5000원 : "+ (((total%50000)%10000)/5000));
-		System.out.println("1000원 : "+ ((((total%50000)%10000)%5000)/1000));
+		System.out.println("10000원 : "+ total%50000/10000);
+		System.out.println("5000원 : "+ total%50000%10000/5000);
+		System.out.println("1000원 : "+ total%50000%10000%5000/1000);
+		
+//		 Scanner sc = new Scanner(System.in);
+//		 System.out.print("출금할 금액 입력 : ");
+//		 int amount = sc.nextInt();
+//		 int fiftyThousand = amount / 50000;
+//		 amount %= 50000;
+//		 int tenthThousand = amount / 10000;
+//		 amount %= 10000;
+//		 int fiveThousand = amount / 5000;
+//		 amount %= 5000;
+//		 int oneThousand = amount / 1000;
+//		 amount %= 1000;
+//		
+//		 System.out.println("50000원 : "+ fiftyThousand);
+//		 System.out.println("10000원 : "+ tenthThousand);
+//		 System.out.println("5000원 : "+ fiveThousand);
+//		 System.out.println("1000원 : "+ oneThousand);
 	}
 	
 	public void practice3() {	
