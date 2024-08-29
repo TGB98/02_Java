@@ -1,0 +1,13 @@
+package edu.kh.variable.ex2;
+
+public class PrintExample {
+
+	public static void main(String[] args) {
+		
+		// System.out.print() : 단순 출력 메서드 ( 출력 후, 줄 바꿈 x ).
+		
+		
+		
+	}
+
+}
