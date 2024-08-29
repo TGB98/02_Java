@@ -1,4 +1,5 @@
 package edu.kh.op.ex;
+import java.util.Scanner;
 
 public class OpExample { // 예제 코드 작성할 클래스
 
@@ -62,4 +63,64 @@ public class OpExample { // 예제 코드 작성할 클래스
 		System.out.println( ( ++c != d ) == ( --c != d) ); // false
 	}
 	
+	
+	public void ex3() {
+		// 논리 연산자 : &&(AND), ||(OR)
+		
+		// &&(AND) : 둘 다 true면 true, 나머지는 false.
+		// ~와, 그리고, ~면서, ~부터 ~까지, ~사이
+		
+		int a = 101;
+		
+		// a는 100이상이면서 짝수인가?
+		System.out.println( (a >= 100) && (a % 2 == 0) ); // false
+		
+		int b = 5;
+		// b는 1부터 10까지 숫자 범위에 포함되어 있는가?
+		// 1~10 -> b는 1보다 크거나 같으면서, 10보다 작거나 같다.
+		System.out.println( (b >= 1) && (b <= 10) ); // true
+		
+		// || (OR) : 둘 다 false면 false, 나머지는 true
+		// 또는, ~거나
+		
+		int c = 10;
+		// c는 10을 초과하거나 짝수인가?
+		System.out.println( (c > 10) || (c % 2 == 0) ); // true
+	}
+
+	
+	public void ex4() {
+		
+		// 삼항 연산자 : 조건식 ? true일 경우 : false일 경우
+		
+		// - 조건식 : 연산 결과가 boolean 값. (true/false)인 식.
+		
+		int num = 30;
+		// num이 30보다 크면 "num은 30보다 큰 수이다" 출력
+		// 아니면 "num은 30이하의 수이다" 출력
+		
+		System.out.println();
+		
+		String result = num > 30 ? "num은 30보다 큰 수이다" : "num은 30이하의 수이다";
+		System.out.println(result);
+		
+		System.out.println("---------------------------------------------------------------");
+		
+		// 입력 받은 정수가 음수인지 양수인지 구분
+		// 단, 0은 양수로 처리
+		
+		// ex)
+		// 정수 입력 : 4
+		// 양수 입니다.
+		
+		// 정수 입력 : -5
+		// 음수 입니다.
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		String result1 = input >= 0 ? "양수 입니다" : "음수 입니다";
+		
+		System.out.println(result1);
+	}
 }

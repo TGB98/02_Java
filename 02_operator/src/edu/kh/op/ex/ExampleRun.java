@@ -13,6 +13,8 @@ public class ExampleRun { // 코드 실행용 클래스
 		// import 를 하지 않아도 불러다 쓸 수 있다.
 		opEx.ex1(); // opEx가 가지고 있는 ex1() 메서드 실행.
 		opEx.ex2();
+		opEx.ex3();
+		opEx.ex4();
 	}
 
 }
