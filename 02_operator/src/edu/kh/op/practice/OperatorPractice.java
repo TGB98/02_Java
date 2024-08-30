@@ -47,7 +47,7 @@ public class OperatorPractice {
 		int num3 = sc.nextInt();
 		
 		System.out.print("성별 : ");
-		String input2 = sc.next();
+		String input2 = sc.next();  // sc.nextLine()을 쓸거면 위에서 sc.nextLine()을 한 번 더 써서 개행(엔터를 쳤을때)을 비워준다.
 		
 		System.out.print("성적 : ");
 		double num4 = sc.nextDouble();
