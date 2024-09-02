@@ -146,10 +146,191 @@ public class LoopPractice {
 		for(int y = 1; y <= num; y++) {
 			String zero = "";
 			String star = "*";
-			for(int x = 1; x <= num; x++) {
+			for(int x = y; x <= num; x++) {
 				zero += star;
 			}
 			System.out.println(zero);
 		}
+	}
+	
+	public void practice9() {
+
+		
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int y = 1; y <= num; y++) {
+			String zero = "";
+			String star = "*";
+			for(int x = 1; x <= y; x++) {
+				zero += star;
+			}
+			System.out.printf("%4s\n",zero);
+		}
+	}
+	
+	public void practice10() {
+//	ex.
+//	정수 입력 : 3
+//	*
+//	**
+//	***
+//	**
+//	*
+		System.out.print("정수 입력 : ");
+		int num = sc.nextInt();
+		
+		for(int y = 1; y <= num; y++) {
+			String zero = "";
+			String star = "*";
+			for(int x = 1; x <= y; x++) {
+					zero += star;
+			}
+			System.out.printf("%s\n",zero);
+		}
+		for(int y= 1; y < num; y++) {
+			String zero = "";
+			String star = "*";
+			for(int x = y; x < num; x++) {
+				zero += star;
+			}
+			System.out.printf("%s\n", zero);
+		}
+		
+		
+	}
+	
+	public void practice11() {
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+//		for(int y = 1; y <= num; y++) {
+//			String zero = "";
+//			String star = "*";
+//			String blank = " ";
+//
+//			for(int x = 1; x <= 2*y-1; x++) {
+//				zero += blank;
+//				zero += star;
+//			}
+//			System.out.println(zero);
+//		}
+
+		/*
+		 * 왼쪽에서부터 공백 포함.
+		 *    *   input(4) + row(1) - 1 == 4 -> 한 행에 열(col)
+		 *   ***  input(4) + row(2) - 1 == 5
+		 *  ***** input(4) + row(3) - 1 == 6
+		 * *******input(4) + row(4) - 1 == 7
+		 * 
+		 * " " 규칙 : input - row 값이 col 이상일 때
+		 * "*" 규칙 : col이 더 클 때
+		 * (1행 : 공백규칙 -> input(4) - row(1) == 3 >= col(1,2,3,4)
+		 * 			col이 4일 때 false이므로 *이 찍힘
+		 * 
+		 * 1부터 시작해서 input 까지 1씩 증가
+		 * for(int row =1; row <= input; row++) {
+		 * 
+		 * 	for(int col = 1; col <= input + row -1; col++) {
+		 * 
+		 * 		if(input-row >= col) { 
+		 * 			System.out.print(" ");
+		 *  }
+		 *  else { System.out.print("*"); }
+		 * }
+		 * 
+		 * }
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 
+		 * */
+		  for(int row =1; row <= input; row++) {
+		  
+		  	for(int col = 1; col <= input + row -1; col++) {
+		 
+		  		if(input-row >= col) { 
+		  			System.out.print(" ");
+		   }
+		  		
+		   else { 
+			   System.out.print("*"); 
+		   }
+		  		
+		  		
+		   }
+		  	System.out.println();
+		  }
+	}
+	
+	
+	public void practice12() {
+		
+		System.out.print("정수 입력 : ");
+		int input = sc.nextInt();
+		
+		for(int row = 1; row <= input; row++) {
+			
+			for(int col = 1; col <= input; col++) {
+				// 첫 번째 / 마지막 행, 첫 번째 / 마지막 열 * 출력
+				if(row == 1 || row == input || col == 1 || col == input) {
+					System.out.print("*");
+				}
+				else { // 나머지는 공백 출력
+					System.out.print(" ");
+				}
+			}
+			System.out.println();
+		}
+	}
+	
+	public void practice13() {
+//	1부터 사용자에게 입력 받은 수까지 중에서
+//	1) 2와 3의 배수를 모두 출력하고
+//	2) 2와 3의 공배수의 개수를 출력하세요.
+//
+//	* ‘공배수’는 둘 이상의 수의 공통인 배수라는 뜻으로 어떤 수를 해당 수들로 나눴을 때
+//	모두 나머지가 0이 나오는 수
+//
+//	ex.
+//	자연수 하나를 입력하세요 : 15
+//	2 3 4 6 8 9 10 12 14 15
+//	count : 2
+		
+		System.out.print("자연수 입력 : ");
+		int num = sc.nextInt();
+
+		int count = 0; // 공배수의 개수를 출력
+		
+		for(int i = 1; i <= num; i++) {
+			
+			// 2의 배수 또는 3의 배수인 경우
+			if(i % 2 == 0 || i % 3 == 0) {
+				System.out.print(i + " ");
+				
+				// 2와 3의 공배수 == 2로도 나누어 떨어지고 3으로도 나누어 떨어짐.
+				if( i % 2 == 0 && i % 3 == 0 ) {
+					// 개수 세기
+					count++;
+					
+				}
+				
+			}
+			
+		}
+		System.out.println("\ncount : " + count);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }
