@@ -208,10 +208,9 @@ public class LoopPractice {
 //		for(int y = 1; y <= num; y++) {
 //			String zero = "";
 //			String star = "*";
-//			String blank = " ";
 //
 //			for(int x = 1; x <= 2*y-1; x++) {
-//				zero += blank;
+//				
 //				zero += star;
 //			}
 //			System.out.println(zero);
