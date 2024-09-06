@@ -2,7 +2,7 @@ package edu.kh.oop.practice.model.vo;
 
 public class Hero {
 
-	private String nickname;
+	private String nickName;
 	private String job;
 	private int hp;
 	private int mp;
@@ -11,28 +11,43 @@ public class Hero {
 	
 	public Hero() {}
 
-	public Hero(String nickname, String job, int hp, int mp, int level, double exp) {
-		this.nickname = nickname;
+	public Hero(String nickName, String job, int hp, int mp, int level, double exp) {
+		this.nickName = nickName;
 		this.job = job;
 		this.hp = hp;
 		this.mp = mp;
 		this.level = level;
 		this.exp = exp;
+		
+		System.out.printf(
+				"===============캐릭터 생성===============\n"
+				+ "%s 직업으로 '%s' 님이 생성되었습니다.\n"
+				+ "현재 레벨 : %d\n"
+				+ "현재 hp : %d\n"
+				+ "현재 mp : %d\n"
+				+ "현재 경험치 : %.1f\n",
+				job, nickName, level, hp, mp, exp );
+		
 	}
 	
 	public void attack (double exp) {
 		this.exp += exp;
-		System.out.println(nickname + "은/는 공격을 했다!! 현재 경험치 : " + this.exp);
+		System.out.printf("'%s'은/는 공격을 했다!! 현재 경험치 : %.1f\n", nickName, this.exp);
 		
-		
+		if(this.exp >= 300) {
+			level += 1;
+			System.out.println("레벨이 올랐습니다! 현재 레벨 : " + level);
+		}
 	}
 
 	public void dash() {
-		this.mp -= mp;
-		System.out.println(nickname + "의 엄청 빠른 대시!! 남은 마력 : " + this.mp);
 		
-		if(this.mp <= 0) {
-			System.out.println("[마력 부족] 더 이상 대시 할 수 없어요");
+		if(mp <= 0) {
+			System.out.println("[마력 부족] 더 이상 대시 할 수 없어요!");
+		}
+		else {
+			mp -= 10;
+			System.out.printf("'%s'의 엄청 빠른 대시!! 남은 마력 : %d\n ", nickName, mp);
 		}
 		
 	}
@@ -40,15 +55,19 @@ public class Hero {
 	
 	@Override
 	public String toString() {
-		return "===========캐릭터 생성==============\n" + job + " 직업으로" + nickname + "님이 생성되었습니다.\n현재 레벨 : " + level + "\n" + "현재 hp : " + hp + "\n" + "현재 mp : " + mp + "\n" + "현재 경험치 : " + exp;
+		return "======='%s'님의 정보======\n"
+				+ "- 현재 레벨 : %d\n"
+				+ "- 현재 hp : %d\n"
+				+ "- 현재 mp : %d\n"
+				+ "- 현재 exp : %.1f\n";
 	}
 
 	public String getNickname() {
-		return nickname;
+		return nickName;
 	}
 
-	public void setNickname(String nickname) {
-		this.nickname = nickname;
+	public void setNickname(String nickName) {
+		this.nickName = nickName;
 	}
 
 	public String getJob() {
