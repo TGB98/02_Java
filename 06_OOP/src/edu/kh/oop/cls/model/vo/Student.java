@@ -78,9 +78,7 @@ public class Student { // 클래스 선언부
 	 *  2) 매개변수 생성자
 	 *  
 	 * */
-	
-	
-	
+
 	
 	// 기본 생성자
 	// [접근제한자] 클래스명() {}
@@ -89,15 +87,7 @@ public class Student { // 클래스 선언부
 		System.out.println("기본생성자에 의해서 Student 객체 생성");
 	} 
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	// 3. 메서드
 	
