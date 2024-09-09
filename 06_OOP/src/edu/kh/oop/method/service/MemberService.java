@@ -39,6 +39,16 @@ public class MemberService {
 			case 2 : System.out.println( login() ); break;
 			case 3 : System.out.println( read() ); break;
 			case 4 : System.out.println( update() ); break;
+	//      case 4 : int result = updateMember();
+	//				if(result == -1) { 
+	//								System.out.println("로그인 후 이용 바람");
+	//		}
+	//		else if(result == 0) {
+	//								System.out.println("회원 정보 수정 실패(비밀번호 불일치)" );
+	//      }
+	//		else {
+	//								System.out.println("회원 정보가 수정 되었습니다");
+	//		}
 			case 0 : System.out.println("프로그램 종료.."); break;
 			default : System.out.println("잘못 입력하셨습니다.. 메뉴에 있는 번호만 입력해주세요");
 			}
@@ -143,15 +153,24 @@ public class MemberService {
 	
 	public String read() {
 		
+		System.out.println("*******회원 정보 조회*******");
+		
 		if(loginMember == null) {
 
 			return "로그인 후 이용해주십시오..";
 		}
 		
+		// String str = "이름 : " + loginMember.getMemberName();
+		// str += "\n아이디 : " + loginMember.getMemberId();
+		// str += "\n나이 : " + loginMember.getMemberAge() + "세"; 
+		// return str;
+		
+		
 		else {
 			return "이름 : " + loginMember.getMemberName()
 							 + "\n아이디 : " + loginMember.getMemberId() 
-							 + "\n나이 : " + loginMember.getMemberAge();
+							 + "\n나이 : " + loginMember.getMemberAge() + "세";
+			
 		}
 		
 	}
@@ -191,6 +210,58 @@ public class MemberService {
 			 }
 		}
 	}
+	 
+	// public int updateMember() {
+	
+		// System.out.println("\n****회원 정보 수정****");
+	    // 1) 로그인 여부 판별
+		// 로그인이 되어있지 않으면 -1 반환.
+	
+		// 2) 로그인이 되었을 때
+		// 2-1) 수정할 회원 정보 입력 받기 (이름, 나이)
+		// 2-2) 비밀번호를 입력받아 로그인한 회원의 비밀번호와 일치하는지 확인.
+		// -> 비밀번호가 일치할 경우, 로그인한 회원의 이름과 나이 정보를 입력받은 값으로 변경 후 1 반환.
+	
+		// -> 비밀번호가 다를 경우 0 반환.
+	
+		// if (loginMember == null) {   		
+			// return -1;
+
+		//}
+	
+		// System.out.print("수정할 이름 입력 : ");
+		// String inputName = sc.next();
+	
+		// System.out.print("수정할 나이 입력 : ");
+		// int inputAge = sc.nextInt();
+	
+		// System.out.print("비밀번호 입력 : ");
+		// String inputPw = sc.next();
+	
+		// if( inputPw.equals(loginMember.getMemberPw()) ) {
+	
+				// loginMember.setMemberName(inputName);
+				// loginMember.setMemberAge(inputAge);
+	
+				// return 1;
+	
+	//	   }
+	//     else {
+	
+				// return 0;
+
+	//     }
+	
+	
+	
+	
+	
+	
+	
+// }
+	
+	
+	
 	
 	
 	
