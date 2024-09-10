@@ -54,7 +54,16 @@ public class MemberService {
 			case 1 : System.out.println( signUp() ); break;
 			case 2 : System.out.println( login() ); break;
 			case 3 : System.out.println( selectMember() ); break;
-			case 4 : updateMember(); break;
+			case 4 : int result = updateMember();
+					 if(result == -1) {
+						 System.out.println("로그인 후 이용 바람.");
+					 }
+					 else if(result == 0) {
+						 System.out.println("회원 정보 수정 실패(비밀번호 불일치)");
+					 }
+					 else {
+						 System.out.println("회원 정보 수정 완료");
+					 } break;
 			case 5 : searchRegion(); break;
 			case 0 : System.out.println("프로그램 종료합니다..."); break;
 			default : System.out.println("메뉴에 있는 번호를 입력해주세요.");
@@ -239,14 +248,15 @@ public class MemberService {
 		public int updateMember() {
 			// 1) 로그인 여부 판별
 			// -> 로그인이 되어있지 않으면 -1 반환
+			System.out.println("========회원 정보 수정========");
+			
 			System.out.print("비밀번호 입력 : ");
 			String memberPw = sc.next();
 			
 			if(loginMember == null) {
-				System.out.println("로그인을 먼저 해주세요.");
 				return -1;
 			}
-			else if(loginMember.getMemberPw().equals(memberPw)) {
+			if(loginMember.getMemberPw().equals(memberPw)) {
 				
 				System.out.print("수정할 이름 입력 : ");
 				String memberName = sc.next();
@@ -263,7 +273,6 @@ public class MemberService {
 				return 1;
 			}
 			else {
-				System.out.println("비밀번호를 다시 확인해주세요");
 				return 0;
 			}
 
