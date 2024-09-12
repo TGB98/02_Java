@@ -8,6 +8,6 @@ public interface ManagementSystem {
 	
 	public abstract void removePerson(String id);
 	
-	public abstract void displayAllPersons();
+	public abstract void displayAllPersons(); // 모든 사람 조회
 	
 }

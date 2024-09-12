@@ -13,7 +13,7 @@ public class TextBook extends Book{
 
 	@Override
 	public void displayinfo() {
-		System.out.println("[전문 서적]" + "제목 : " + getTitle() + " / " + "저자 : " + getAuthor() + " / " + "과목 : " + subject);
+		System.out.println("[전문 서적]" + "제목 : " + super.getTitle() + " / " + "저자 : " + super.getAuthor() + " / " + "과목 : " + subject);
 	}
 
 	public String getSubject() {

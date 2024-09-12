@@ -18,6 +18,12 @@ public class Run {
 		for(int i = 0; i < bookArr.length; i++) {
 			bookArr[i].displayinfo();
 		}
+		
+		// for( Book book : bookArr ) {
+//				book.dispalyinfo();
+		//      System.out.println(); 개행
+//		}
+		
 	}
 
 }

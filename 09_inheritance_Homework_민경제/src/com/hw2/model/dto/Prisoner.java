@@ -12,7 +12,7 @@ public class Prisoner extends Person{
 
 	@Override
 	public String getInfo() {
-		return "직원이 추가되었습니다 - ID : " + id + ", 이름 : " + name + ", 죄목 : " + crime;
+		return String.format("ID : %s, 이름 : %s, 죄목 : %s", id, name, crime);
 	}
 
 }
