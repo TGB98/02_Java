@@ -20,6 +20,9 @@ public class StudentService {
 	// new ArrayList() : 기본생성자 -> 기본 크기가 10짜리 리스트 생성
 	// 		-> 하지만 리스트는 크기가 늘었다 줄었다 하기 때문에 큰 의미 없음
 	
+	// List<E> list = null;
+	// add(값) 을 해도 nullPointerException으로 인한 런타임에러가 발생한다.
+	
 	// ArrayList(용량) : 용량 만큼의 리스트 생성
 	// 		-> 너무 큰 값을 작성하면 메모리를 많이 소모함
 	
