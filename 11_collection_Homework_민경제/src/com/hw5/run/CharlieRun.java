@@ -8,6 +8,8 @@ public class CharlieRun {
 
 		Charlie_Factory cf = new Charlie_Factory();
 		
+		cf.factoryOpen();
+		
 	}
 
 }
